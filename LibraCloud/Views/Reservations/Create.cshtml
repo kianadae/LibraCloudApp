@@ -1,0 +1,35 @@
+﻿@model LibraCloud.Models.Reservation
+
+@{
+    ViewData["Title"] = "Confirm Reservation";
+}
+
+<section class="container my-5">
+    <div class="glass-card light-card p-4">
+        <h2 class="fw-bold text-blue mb-4">@ViewData["Title"]</h2>
+
+        @if (!ViewData.ModelState.IsValid)
+        {
+            <div class="alert alert-danger">
+                <ul class="mb-0">
+                    @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                    {
+                        <li>@error.ErrorMessage</li>
+                    }
+                </ul>
+            </div>
+        }
+
+        <form asp-action="Create" method="post" class="mb-3">
+            @Html.AntiForgeryToken()
+            <input type="hidden" asp-for="BookId" />
+
+            <p class="lead">Are you sure you want to reserve this book?</p>
+
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary">Reserve</button>
+                <a asp-controller="Books" asp-action="Index" class="btn btn-outline-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</section>

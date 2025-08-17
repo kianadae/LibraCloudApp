@@ -1,0 +1,232 @@
+html {
+  font-size: 14px;
+}
+nav .container-fluid {
+    max-width: 1140px !important;
+}
+.navbar-nav:first-child li.nav-item:first-child i {
+    color: #ffc107 !important;
+}
+
+.navbar-nav:first-child li.nav-item:nth-child(2) i {
+    color: #1aa2ff !important;
+}
+
+.navbar-nav:first-child li.nav-item:nth-child(3) i {
+    color: #0bb900 !important;
+}
+
+.navbar-nav:first-child li.nav-item:first-child:hover {
+    border-bottom: solid 2px #ffc107 !important;
+}
+
+.navbar-nav:first-child li.nav-item:nth-child(2):hover {
+    border-bottom: solid 2px #1aa2ff !important;
+}
+
+.navbar-nav:first-child li.nav-item:nth-child(3):hover {
+    color: #0bb900 !important;
+    border-bottom: solid 2px #0bb900 !important;
+}
+header a.nav-link.text-dark {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    color: #1a1a1acf !important;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+.btn {
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    border-radius: 12px !important;
+}
+
+    .btn.btn-warning {
+        color: #fff !important;
+    }
+
+    .btn:hover {
+        transform: translateY(-3px);
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+    
+/*Home CSS*/
+
+#hero {
+    border-radius: 40px;
+    background: radial-gradient(circle,rgba(62, 169, 250, 1) 0%, rgba(14, 109, 199, 1) 48%, rgba(9, 83, 135, 1) 100%);
+    display: flex;
+    padding: 1rem 2.5rem;
+    border-radius: 40px;
+    color: white;
+    overflow: hidden;
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+.btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+.card-btn {
+    color: rgba(255, 255, 255, 0.8) !important;
+    text-decoration: none !important;
+}
+a.card-btn:hover {
+    color: #fff !important;
+    text-decoration: none !important;
+}
+.glass-card {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    color: #fff;
+}
+
+.glass-card h5 {
+    color: #fff;
+ }
+.glass-cards {
+    display: flex;
+    gap: 1rem;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+    .glass-card:hover {
+        transform: translateY(-8px);
+        color: #fff;
+    }
+
+
+@media (max-width: 991px) {
+    .glass-cards {
+        flex-direction: column;
+    }
+}
+
+
+.floating-image {
+    max-width: 100%;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-10px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+@media (max-width: 991px) {
+    #hero {
+        height: auto;
+        padding: 4rem 1rem;
+        text-align: center;
+    }
+
+}
+footer {
+    background: #ffffff!important;
+    position: relative !important;
+}
+   footer .d-flex {
+        display: flex !important;
+        justify-content: space-between;
+        font-size:14px!important;
+    }
+
+
+/*end of HomeCSS END*/
+
+/*Login Partial CSS*/
+
+.navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.85) !important;
+    transition: color 0.3s ease;
+}
+
+    .navbar-nav .nav-link:hover {
+        color: #1a1a1a !important;
+    }
+
+.btn-outline-light {
+    border-color: rgba(0, 0, 0, 0.5);
+    color: #1a1a1a;
+}
+
+    .btn-outline-light:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-color: #1a1a1a;
+    }
+
+/* Optional: Smooth animation */
+.navbar-nav .nav-link, .btn-outline-light {
+    transition: all 0.3s ease;
+}
+
+/*Login Page*/
+.login-card {
+    background: radial-gradient(circle, rgba(62, 169, 250, 1) 0%, rgba(14, 109, 199, 1) 48%, rgba(9, 83, 135, 1) 100%)!important;
+    color: white!important;
+    border-radius: 40px !important;
+    overflow: hidden;
+}
+/*End of Login Page*/
+
+/*Books*/
+.dark-card {
+    background: radial-gradient(circle, rgb(14 141 238) 0%, rgba(14, 109, 199, 1) 48%, rgba(9, 83, 135, 1) 100%);
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .dark-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+.btn.btn-reserve {
+    background: #ffffffa8;
+    color: #0945a2;
+}
+
+    .btn.btn-reserve:hover {
+        background: #ffffff;
+        color: #0945a2;
+    }
+
+.text-blue {
+    color: rgb(8 68 162) !important;
+}
+.glass-card.light-card.p-4 {
+    background: #fff;
+    color: #1aa3ff !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* End of Books*/

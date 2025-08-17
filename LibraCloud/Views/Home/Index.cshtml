@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Welcome";
+}
+
+<section id="hero" class="position-relative">
+    <div class="overlay"></div>
+    <div class="hero-content container">
+        <div class="row align-items-center">
+            <!-- Left: Text + Button + Cards -->
+            <div class="col-lg-6 text-start">
+                <h1 class="display-4 fw-bold mb-3">Welcome to LibraCloud</h1>
+                <p class="lead mb-4">Your online library system to browse, reserve, and manage books with ease.</p>
+
+                @if (User.IsInRole("Admin"))
+                {
+                    <a asp-controller="Admin" asp-action="Dashboard" class="btn btn-warning btn-lg mb-4">
+                        Go to Admin Dashboard
+                    </a>
+                }
+
+                <!-- Glassmorphism Cards - Now Horizontal -->
+                <div class="glass-cards d-flex flex-wrap gap-3">
+                    <div class="p-4 glass-card flex-fill text-start">
+                        <h5 class="fw-bold mb-2">Browse Books</h5>
+                        <p>Explore our library collection.</p>
+                        <a asp-controller="Books" asp-action="Index" class="card-btn">
+                            <i class="bi bi-search"></i> Browse Books
+                        </a>
+
+                    </div>
+                    <div class="p-4 glass-card flex-fill text-start">
+                        <h5 class="fw-bold mb-2">Reserve Books</h5>
+                        <p>Reserve books anytime.</p>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <a asp-controller="Reservations" asp-action="Index" class="card-btn">
+                                <i class="bi bi-bookmark-check"></i> My Reservations
+                            </a>
+
+                        }
+                        else
+                        {
+                            <a asp-area="Identity" asp-page="/Account/Login" class="card-btn">
+                                <i class="bi bi-box-arrow-in-right"></i> Login to Reserve
+                            </a>
+
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Book Image -->
+            <div class="col-lg-6 d-none d-lg-block">
+                <img src="~/images/BooksOnClouds.png" alt="Books" class="img-fluid floating-image">
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,30 @@
+﻿@*
+    /Views/Shared/_LoginLayout.cshtml
+*@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - LibraCloud</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap-icons/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    @* Optional: Allow per-page CSS *@
+    @RenderSection("Styles", required: false)
+</head>
+<body>
+
+    <main class="container text-white">
+        @RenderBody()
+    </main>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    @* Required to prevent section errors *@
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

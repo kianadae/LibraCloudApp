@@ -1,0 +1,46 @@
+﻿@model IEnumerable<LibraCloud.Models.Book>
+
+<section class="container my-5">
+    <h1 class="text-black fw-bold mb-4">Book Collection</h1>
+
+    <div class="row g-4">
+        @foreach (var book in Model)
+        {
+            <div class="col-md-6 col-lg-4">
+                <div class="glass-card dark-card p-4 h-100 d-flex flex-column justify-content-between">
+                    <div>
+                        <h5 class="fw-bold text-white">@book.Title</h5>
+                        <p class="mb-1 text-white">by @book.Author</p>
+                        <p class="mb-2 text-white">Available: @book.QuantityAvailable</p>
+                    </div>
+
+                    <div class="mt-3">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <a asp-controller="Reservations" asp-action="Create" asp-route-bookId="@book.Id" class="btn btn-reserve w-100 mb-2">
+                                <i class="bi bi-bookmark-check"></i> Reserve
+                            </a>
+                        }
+
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <div class="d-flex justify-content-between">
+                                <a asp-action="Edit" asp-route-id="@book.Id" class="btn btn-warning btn-sm w-50 me-2">Edit</a>
+                                <a asp-action="Delete" asp-route-id="@book.Id" class="btn btn-danger btn-sm w-50">Delete</a>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    @if (User.IsInRole("Admin"))
+    {
+        <div class="text-end mt-4">
+            <a asp-action="Create" class="btn btn-success">
+                <i class="bi bi-plus-lg"></i> Add New Book
+            </a>
+        </div>
+    }
+</section>
