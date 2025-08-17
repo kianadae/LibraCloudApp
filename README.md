@@ -11,6 +11,11 @@ It provides a modern solution for managing books, users, and borrowing records, 
 - 📅 Simple CRUD Web App
 - 📊 Dashboard with library usage statistics
 
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/bcb24d31-bc74-4ac2-a0aa-6553c51e89b4" />
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/2b31ef8d-06c3-4fa2-a51d-6cc9b5d701f1" />
+
+
+
 ---
 
 ## 🛠️ Technologies Used
